@@ -11,16 +11,16 @@
             font-family: sans-serif;
             color: white;
             display: grid;
-            grid-template-columns: 1fr 8fr 3fr 7fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 3fr 8fr 3fr 7fr;
+            grid-template-rows: 2fr 3fr 1fr;
             background-color: #8cceb2;
             grid-template-areas: 
-                "Fheader . . . ."
-                "sideleft bulba . sideright."
-                "footer . . . .";
+                "Fheader  . . . "
+                "sideleft  bulba . sideright"
+                "footer  . . . ";
             
             height: 650px;
-            width:  1100px;
+            width:  1200px;
         }
         .item-A{
             grid-area: Fheader;
@@ -42,18 +42,13 @@
             display: flex;
             flex-direction: column;
         }
-        short{
+        .weighthight{
             margin: auto;
-            margin-right: 0;
+            margin-top: 110%;
+            margin-left: 35%;
             font-size: 60%;
-        }
-        .heightShort{
-            margin-left: 0;
-            margin-bottom: 0;
-        }
-        .weigthShort{
-            margin-left: 0;
-            margin-top: 0;
+            font-weight:light;
+
         }
         .item-C{
             grid-area: bulba;
@@ -63,7 +58,7 @@
         .fushigidane{
             font-weight: bold;
             font-size: 80px;
-            opacity: 0.5;
+            opacity: 0.4;
             color:#000;
             z-index: 2;
         }
@@ -81,14 +76,17 @@
             grid-area: sideright;
             display: flex;
             flex-direction: column;
+            margin-top: 25%;
+            margin-left: 5%;
         }
         .types{
             margin-top: 0;
             margin-left: 3%;
             position: relative;
             float: left;
-            width: 13%;
+            width: 8%;
             height: auto;
+            z-index: 0;
         }
         h2{
             font-size: 20px;
@@ -101,20 +99,20 @@
             margin-top: 5%;
             margin-left: 3%;
             display: grid;
-            grid-template-columns: 1fr 9fr;
+            grid-template-columns: 5% 95%;
             
         }
         .line{
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             margin-top: 0%;
-            width: 10%;
+            width: 20%;
             height: 100%;
             background-color: white;
             opacity: .5;
         }
         .up-line{
-            height: 85%;
+            height: 92%;
             margin-top: 10%;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
@@ -125,6 +123,7 @@
             width: 90%;
             display: flex;
             flex-direction: row;
+            margin-right: 60%;
         }
         .up{
             align-self: flex-start;
@@ -152,10 +151,16 @@
             display: flex;
         }
         .kanto{
-            align-self: stretch;
             transform: rotate(-90deg);
-            margin-top: 180%;
-            margin-left: 20%;
+            height:fit-content;
+            margin-bottom: 20%;
+            margin-top: 80%;
+            margin-left: 0%;
+            margin-right: 50%;
+        }
+        .region{
+            font-size: 60%;
+            font-weight:light;
         }
     </style>
 </head>
@@ -167,8 +172,8 @@
                 <h3>Bulbasaur</h2>
             </div>
             <div class="item item-B">
-                <short class="heightShort">Height: 0,7m</short>
-                <short class="weigthShort">Weigth: 6,9kg</short>
+                <p class="weighthight"><short class="heightShort">Height: 0,7m</short>
+                <short class="weigthShort">Weigth: 6,9kg</short></p>
             </div>
             <div class="item item-C">
                 <short class="fushigidane">フシギダネ</short>
