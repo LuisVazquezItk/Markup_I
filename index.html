@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container{
+            font-family: sans-serif;
+            color: white;
+            display: grid;
+            grid-template-columns: 3fr 8fr 3fr 7fr;
+            grid-template-rows: 2fr 3fr 1fr;
+            background-color: #8cceb2;
+            grid-template-areas: 
+                "Fheader  . . . "
+                "sideleft  bulba . sideright"
+                "footer  . . . ";
+            
+            height: 650px;
+            width:  1200px;
+        }
+        .item-A{
+            grid-area: Fheader;
+        }
+        h4, h3{
+            font-size: 60%;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-bottom: 0em;
+            margin-top: 5px;
+        }
+        h3{
+            font-size: 90%;
+        }
+        .item-B{
+            width: 75%;
+            margin-left: 25%;
+            grid-area: sideleft;
+            display: flex;
+            flex-direction: column;
+        }
+        .weighthight{
+            margin: auto;
+            margin-top: 110%;
+            margin-left: 35%;
+            font-size: 60%;
+            font-weight:light;
+
+        }
+        .item-C{
+            grid-area: bulba;
+            position: relative;
+            z-index: 1;   
+        }
+        .fushigidane{
+            font-weight: bold;
+            font-size: 80px;
+            opacity: 0.4;
+            color:#000;
+            z-index: 2;
+        }
+        img{
+            float: right;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: auto;
+            z-index: -1;
+
+        }
+        .item-D{
+            grid-area: sideright;
+            display: flex;
+            flex-direction: column;
+            margin-top: 25%;
+            margin-left: 5%;
+        }
+        .types{
+            margin-top: 0;
+            margin-left: 3%;
+            position: relative;
+            float: left;
+            width: 8%;
+            height: auto;
+            z-index: 0;
+        }
+        h2{
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 3%;
+            margin-bottom: 0em;
+            margin-top: 5px;
+        }
+        .statline{
+            margin-top: 5%;
+            margin-left: 3%;
+            display: grid;
+            grid-template-columns: 5% 95%;
+            
+        }
+        .line{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-top: 0%;
+            width: 20%;
+            height: 100%;
+            background-color: white;
+            opacity: .5;
+        }
+        .up-line{
+            height: 92%;
+            margin-top: 10%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 0 ;
+            border-bottom-right-radius: 0 ;
+        }
+        .stats{
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            margin-right: 60%;
+        }
+        .up{
+            align-self: flex-start;
+            margin-left: 0%;
+        }
+        box{
+            border-radius: 5px;
+            width: fit-content;
+            color: #000;
+            background-color: white;
+            display: flex;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        box>short{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            background-color: white;
+            font-size: 50%;
+        }
+        .item-E{
+            grid-area: footer;
+            display: flex;
+        }
+        .kanto{
+            transform: rotate(-90deg);
+            height:fit-content;
+            margin-bottom: 20%;
+            margin-top: 80%;
+            margin-left: 0%;
+            margin-right: 50%;
+        }
+        .region{
+            font-size: 60%;
+            font-weight:light;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="item item-A">
+                <h4>#001</h3>
+                <h3>Bulbasaur</h2>
+            </div>
+            <div class="item item-B">
+                <p class="weighthight"><short class="heightShort">Height: 0,7m</short>
+                <short class="weigthShort">Weigth: 6,9kg</short></p>
+            </div>
+            <div class="item item-C">
+                <short class="fushigidane">フシギダネ</short>
+                <img src="https://maurowernly.github.io/Pokedex/images/pokemons/001Bulbasaur.png" alt="Bulbasaur">
+            </div>
+            <div class="item item-D">
+                <article>
+                    <img class="types" src="https://archives.bulbagarden.net/media/upload/a/a8/Grass_icon_SwSh.png" alt="grass symbol">
+                    <img class="types" src="https://archives.bulbagarden.net/media/upload/8/8d/Poison_icon_SwSh.png" alt="poison symbol">
+                </article>
+                <h2>Base stats:</h2>
+                <article class="statline">
+                    <div class="line up-line"></div>
+                    <section class="stats up">
+                        <box><short>HP: 45</short></box>
+                        <box><short>ATTACK: 49</short></box>
+                        <box><short>DEFENSE: 49</short></box>
+                        <box><short>SP. ATTACK: 65</short></box>
+                    </section>
+                    <div class="line"></div>
+                    <section class="stats down">
+                        <box><short>SP. DEFENSE: 65</short></box>
+                        <box><short>SPEED: 45</short></box>
+                    </section>
+                </article>
+            </div>
+            <div class="item item-E">
+                <article class="kanto">
+                    <short class="region">Región: Kanto</short>
+                </article>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
